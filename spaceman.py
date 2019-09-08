@@ -135,6 +135,8 @@ def is_guess_in_word(guess, secret_word):
 #             r = m - 1
 
 #     return -1
+def test(): pass
+# just a test fucntion nothing to see here
 
 
 def play_again():
@@ -166,8 +168,6 @@ def banner():
         spaceman = random.choice(kind)
     print(Fore.LIGHTBLUE_EX +
           pyfiglet.figlet_format('Spaceman', font=spaceman) + Fore.RESET)
-    # print('The secret word contains: {} letters'.format(len(secret_word)))
-    # print('You have {} incorrect guesses left, please enter one letter per round'.format(incorrect_guesses))
 
 
 def spaceman(secret_word):
@@ -228,21 +228,8 @@ def spaceman(secret_word):
                     remaining) + Fore.RESET)
 
 
-# run = True
-# while run:
-#     spaceman(load_word())
-#     run = play_again()
-# print('[-] Exiting ...')
-
-
-def find(somelist, key):
-    temp = []
-    for num in somelist:
-        if num == key:
-            print(Fore.LIGHTGREEN_EX + '[+] Found ' + str(key) + Fore.RESET)
-            temp.append(num)
-    print(temp)
-
-
-somelist = [1, 2, 3, 1, 3, 5]
-find(somelist, 1)
+run = True
+while run:
+    spaceman(load_word())
+    run = play_again()
+print('[-] Exiting ...')
